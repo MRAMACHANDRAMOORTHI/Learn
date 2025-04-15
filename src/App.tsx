@@ -1,5 +1,7 @@
 // import './App.css'
 
+import Sample from "./Sample"
+
 function App() {
   
 
@@ -7,6 +9,7 @@ function App() {
     <>
       <div>
         <h3>Welcome</h3>
+        <Sample />
       </div>
     </>
   )

@@ -1,7 +1,5 @@
 // import './App.css'
 
-import Sample from "./Sample"
-
 function App() {
   
 

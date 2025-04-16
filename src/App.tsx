@@ -1,5 +1,7 @@
 // import './App.css'
 
+import Signup from "./components/Signup"
+
 function App() {
   
 
@@ -7,6 +9,7 @@ function App() {
     <>
       <div>
         <h3>Welcome</h3>
+        <Signup />
       </div>
     </>
   )

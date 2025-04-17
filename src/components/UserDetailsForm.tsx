@@ -21,8 +21,12 @@ const UserDetailsForm: React.FC<UserDetailsFormProps> = ({ setUserDetails }) => 
   const [company, setCompany] = useState('');
   const [address, setAddress] = useState('');
   const [role, setRole] = useState('');
+
+
   const navigate = useNavigate();
+
   const userRef = collection(db, 'users');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -36,7 +40,9 @@ const UserDetailsForm: React.FC<UserDetailsFormProps> = ({ setUserDetails }) => 
       });
       console.log('Document written with ID: ', docRef.id);
       alert('User details saved successfully!');
+
       setUserDetails({ name, mobile, desc, company, address, role }); // Set user details
+      
       navigate('/user-details-display'); // Navigate to display page after saving
     } catch (e) {
       console.error('Error adding document: ', e);

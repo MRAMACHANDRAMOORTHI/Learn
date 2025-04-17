@@ -1,17 +1,14 @@
+import Auth from "./components/auth"
+
 // import './App.css'
-
-import Sample from "./Sample"
-
 function App() {
-  
-
   return (
     <>
       <div>
-        <h3>Welcome</h3>
+        <h4>Welcome!</h4>
+        <Auth />
       </div>
     </>
   )
 }
-
 export default App

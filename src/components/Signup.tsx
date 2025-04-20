@@ -7,6 +7,7 @@ import { useNavigate, Link } from 'react-router-dom';
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  
   const navigate = useNavigate();
 
   const handleSignup = async (e: React.FormEvent) => {
@@ -15,6 +16,7 @@ const Signup = () => {
       await createUserWithEmailAndPassword(auth, email, password);
       alert("Signup successful!");
       navigate('/login');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       alert(error.message);
     }

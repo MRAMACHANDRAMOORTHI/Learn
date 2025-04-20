@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import UserDetailsForm from './components/UserDetailsForm';
 import UserDetailsDisplay from './components/UserDetailsDisplay';
+import AddStudent from './components/AddStudent';
+import Students from './components/Students';
 
 function App() {
   const [userDetails, setUserDetails] = useState<{ name: string; mobile: string; desc: string; company: string; address: string; role: string } | null>(null);
@@ -15,6 +17,8 @@ function App() {
         <Route path="/" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/add-student" element={<AddStudent/>} />
+        <Route path="/students" element={<Students/>}/>
         <Route path="/user-details" element={<UserDetailsForm setUserDetails={setUserDetails} />} />
         <Route path="/user-details-display" element={<UserDetailsDisplay {...(userDetails || { name: '', mobile: '', desc: '', company: '', address: '', role: '' })} />} />
       </Routes>

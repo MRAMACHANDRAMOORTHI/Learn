@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { signOut } from 'firebase/auth'
 import { auth, db } from '../firebaseConfig'
 import { useNavigate } from 'react-router-dom'
-import { collection, getDoc, getDocs } from 'firebase/firestore'
+import { collection, getDocs } from 'firebase/firestore'
 
 const Home = () => {
   const navigate = useNavigate();
+
 
   interface User {
     id: string;
@@ -52,7 +53,7 @@ const Home = () => {
           <p>Qualification : {user.desc}</p>
           <p>Role : {user.role}</p>
           <p>Age : {user.age}</p>
-          
+        
 
           </div>
         )

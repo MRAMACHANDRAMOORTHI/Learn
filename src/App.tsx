@@ -7,6 +7,7 @@ import UserDetailsForm from './components/UserDetailsForm';
 import UserDetailsDisplay from './components/UserDetailsDisplay';
 import AddStudent from './components/AddStudent';
 import Students from './components/Students';
+import Fb_Test from './components/Fb_Test';
 
 function App() {
   const [userDetails, setUserDetails] = useState<{ name: string; mobile: string; desc: string; company: string; address: string; role: string } | null>(null);
@@ -21,6 +22,7 @@ function App() {
         <Route path="/students" element={<Students/>}/>
         <Route path="/user-details" element={<UserDetailsForm setUserDetails={setUserDetails} />} />
         <Route path="/user-details-display" element={<UserDetailsDisplay {...(userDetails || { name: '', mobile: '', desc: '', company: '', address: '', role: '' })} />} />
+        <Route path='/test' element={<Fb_Test />} />
       </Routes>
     </Router>
   );
